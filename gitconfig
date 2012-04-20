@@ -1,0 +1,22 @@
+[user]
+	name = syhw
+	email = gabriel.synnaeve@gmail.com
+[alias]
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+    logl = log --pretty=oneline --abbrev-commit
+    gl = log --graph --pretty=oneline --abbrev-commit -25
+    st = status -sb
+    ci = commit
+    co = checkout
+    w = whatchanged
+
+[diff]  
+    renamelimit = 0
+
+[color] 
+    diff = auto
+    interactive = auto
+    status = auto
+    branch = auto
+    ui = true    # not sure about
+    pager = true # these ones

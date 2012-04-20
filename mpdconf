@@ -1,0 +1,12 @@
+music_directory "/Users/gabrielsynnaeve/Music/local/"
+follow_outside_symlinks "yes"
+follow_inside_symlinks "yes"
+db_file "/Users/gabrielsynnaeve/.mpddb"
+sticker_file "/Users/gabrielsynnaeve/.mpdstick"
+log_file "/Users/gabrielsynnaeve/.mpdlog"
+audio_output {
+    type "osx"
+    name "OSX"
+}
+
+
