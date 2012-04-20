@@ -1,0 +1,9 @@
+[dotfiles]
+repository = ~/Dotfiles
+ignore = [
+    '.git',
+    '.gitignore',
+    '*.swp',
+    '*.hi',
+    '*.o',
+    '.vim/backup/*']
