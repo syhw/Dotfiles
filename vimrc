@@ -3,21 +3,31 @@ if v:progname =~? "evim"
   finish
 endif
 
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+set nocompatible " vIM
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'ervandew/supertab'
+" Bundle 'daveray/vimclojure-easy', {'rtp': 'bundle/vimclojure-2.3.1'}
+Bundle 'VimClojure'
+Bundle 'snipMate'
+
+
 filetype plugin on
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
 
+" set the completion to a menu when there is more than 1 choice
 set completeopt=menu
-" au Filetype java setlocal omnifunc=javacomplete#Complete
-" let OmniCpp_SelectFirstItem = 2
-" map <C-F12> :!ctags * --c-types=+p --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-" map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-" map <C-F1> <F12>
-" nmap <C-F12> :!ctags * --c-types=+p --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -31,13 +41,6 @@ set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
-
-" This is an alternative that also works in block mode, but the deleted
-" text is lost and it only works for putting the current register.
-"vnoremap p "_dp
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -84,24 +87,15 @@ set shiftwidth=4
 set expandtab
 set tabstop=4
 set background=dark
- " colorscheme desert256
- " colorscheme desert
- " colorscheme elflord
- " colorscheme peachpuff
- " colorscheme ron 
- " colorscheme delek " slate
- " colorscheme molokai
+" colorscheme molokai / delek / slate
 colorscheme solarized
-
 
 if has("statusline")
     set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
 endif
 
-""au BufNewFile *.py 0r ~/vim/skeleton.py
-
 if v:version >= 703 
-    set colorcolumn=80
+    set colorcolumn=80 " set a colored delimiter at 80 char
 endif
 
 " To save with ctrl-s
@@ -137,5 +131,5 @@ augroup ml
 augroup END
 
 " Settings for VimClojure
-let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
-"let g:clj_paren_rainbow=1           " Rainbow parentheses'!
+let vimclojure#HighlightBuiltins = 1  " Highlight Clojure's builtins
+
