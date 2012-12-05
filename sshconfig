@@ -28,3 +28,12 @@ Host=cst
 Hostname=nexus.clan-cst.com
 User=snippy
 
+Host=cloverfeed
+Hostname=cloverfeed.com
+User=ubuntu
+IdentityFile=~/.ssh/velib-keypair.pem
+
+Host=cloverfeed.com
+Hostname=cloverfeed.com
+User=gitolite
+IdentityFile=~/.ssh/velib-keypair.pem

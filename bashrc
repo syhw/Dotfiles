@@ -6,7 +6,7 @@ set bell-style none
 #defaults write -g com.apple.mouse.ignoreTrackpadIfMousePresent 0
 
 export JAVA_HOME=/Library/Java/Home
-export PATH=/usr/local/sbin:/usr/local/bin/:$PATH:/opt/local/bin:/opt/local/sbin:/Users/gabrielsynnaeve/.gem/ruby/1.8/bin:~/local/bin:~/Library/Haskell/bin:/usr/local/ada-4.3/bin:/usr/local/share/python:/usr/sbin
+export PATH=/usr/local/sbin:/usr/local/bin/:$PATH:/opt/local/bin:/opt/local/sbin:/Users/gabrielsynnaeve/.gem/ruby/1.8/bin:~/local/bin:~/Library/Haskell/bin:/usr/local/ada-4.3/bin:/usr/local/share/python:/usr/local/share/npm/bin/:/usr/sbin
 export DISPLAY=:0.0
 export CLICOLOR=1
 export LSCOLORS="gxfxcxdxbxegedabagGxGx"

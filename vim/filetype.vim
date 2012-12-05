@@ -8,4 +8,7 @@ augroup END
 augroup markdown
     au! BufRead,BufNewFile *.mkd   setfiletype mkd
 augroup END
+augroup mako
+    au! BufRead,BufNewFile *.mako   setfiletype mako
+augroup END
 
