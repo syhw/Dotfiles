@@ -37,3 +37,7 @@ Host=cloverfeed.com
 Hostname=cloverfeed.com
 User=gitolite
 IdentityFile=~/.ssh/velib-keypair.pem
+
+Host=habilis
+Hostname=129.199.82.97
+User=gsynnaeve
