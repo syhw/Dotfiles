@@ -20,7 +20,8 @@ Bundle 'ervandew/screen'
 " Bundle 'daveray/vimclojure-easy', {'rtp': 'bundle/vimclojure-2.3.1'}
 Bundle 'VimClojure'
 Bundle 'snipMate'
-Bundle 'altercation/vim-colors-solarized'
+" Bundle 'altercation/vim-colors-solarized'
+Bundle 'pkamenarsky/atea.vim'
 
 
 filetype plugin on
