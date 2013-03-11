@@ -22,6 +22,7 @@ Bundle 'VimClojure'
 Bundle 'snipMate'
 " Bundle 'altercation/vim-colors-solarized'
 Bundle 'pkamenarsky/atea.vim'
+Bundle 'kien/ctrlp.vim'
 
 
 filetype plugin on
