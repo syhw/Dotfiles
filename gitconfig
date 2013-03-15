@@ -20,3 +20,5 @@
     branch = auto
     ui = true    # not sure about
     pager = true # these ones
+[push]
+	default = matching

@@ -23,11 +23,13 @@ export LANGUAGE=fr_FR.UTF-8
 export LC_ALL=fr_FR.UTF-8
 export LC_MESSAGES=fr_FR.UTF-8
 export GNUTERM="x11"
+export CUDA_ROOT="/Developer/NVIDIA/CUDA-5.0/"
+export HTK_BIN="/Users/gabrielsynnaeve/postdoc/htk/build/bin/"
 
 # shortcuts
 alias scpresume="rsync --partial --progress --rsh=ssh"
 alias cloj="rlwrap clj"
-alias ipy="/usr/local/share/python/ipython -pylab"
+alias ipy="/usr/local/share/python/ipython --pylab"
 alias git-serve='git daemon --reuseaddr --base-path=. --export-all'
 alias bwiki="surf file:///Users/gabrielsynnaeve/labs/mkd-wiki/html/index &"
 alias scwiki="surf http://wiki.teamliquid.net/starcraft/Main_Page &"
@@ -52,3 +54,4 @@ export PS1="\w \[\033[0;35m\]$\[\033[0m\] "
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:/usr/local/share/python/:$HTK_BIN
