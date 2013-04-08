@@ -41,3 +41,15 @@ IdentityFile=~/.ssh/velib-keypair.pem
 Host=habilis
 Hostname=129.199.81.135
 User=gsynnaeve
+IdentityFile=~/.ssh/habilis
+
+Host=gitolite
+User=gitolite
+Hostname=129.199.81.135
+Identityfile=~/.ssh/gitolite_habilis
+
+Host=githabilis
+User=gitolite
+Hostname=129.199.81.135
+Identityfile=~/.ssh/habilis
+

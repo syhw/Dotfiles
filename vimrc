@@ -23,7 +23,7 @@ Bundle 'snipMate'
 " Bundle 'altercation/vim-colors-solarized'
 Bundle 'pkamenarsky/atea.vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-foreplay'
+Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
 
