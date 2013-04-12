@@ -24,7 +24,7 @@ export LC_ALL=fr_FR.UTF-8
 export LC_MESSAGES=fr_FR.UTF-8
 export GNUTERM="x11"
 export CUDA_ROOT="/Developer/NVIDIA/CUDA-5.0/"
-export HTK_BIN="/Users/gabrielsynnaeve/postdoc/htk/build/bin/"
+export HTK_BIN="/Users/gabrielsynnaeve/postdoc/htk/HTKTools/"
 
 # shortcuts
 alias scpresume="rsync --partial --progress --rsh=ssh"
