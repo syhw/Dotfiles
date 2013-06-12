@@ -53,3 +53,12 @@ User=gitolite
 Hostname=129.199.81.135
 Identityfile=~/.ssh/habilis
 
+Host=cogito
+User=gsynnaeve
+Hostname=cogito.ens.fr
+Identityfile=~/.ssh/habilis
+
+Host=oberon
+User=gsynnaeve
+Hostname=129.199.81.30
+

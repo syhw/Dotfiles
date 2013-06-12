@@ -26,6 +26,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
+Bundle 'rking/ag.vim'
 
 
 filetype plugin on
