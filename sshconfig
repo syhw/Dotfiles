@@ -1,7 +1,6 @@
 Host=sonata
-Hostname=192.168.1.71
-User=snippy
-Port=13337
+Hostname=192.168.1.41
+User=syhw
 
 Host=extSonata
 Hostname=93.26.57.7
@@ -61,4 +60,9 @@ Identityfile=~/.ssh/habilis
 Host=oberon
 User=gsynnaeve
 Hostname=129.199.81.30
+Identityfile=~/.ssh/habilis
 
+Host=heroku.com
+User=git
+Hostname=heroku.com
+Identityfile=~/.ssh/github_rsa

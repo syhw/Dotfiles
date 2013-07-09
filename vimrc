@@ -27,6 +27,7 @@ Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
 Bundle 'rking/ag.vim'
+Bundle 'bling/vim-airline'
 
 
 filetype plugin on
@@ -163,3 +164,8 @@ augroup END
 ""let classpath = system("lein classpath")
 ""nmap <silent> <Leader>sc :execute "ScreenShell java -cp \"" . classpath . "\" vimclojure.nailgun.NGServer 127.0.0.1" <cr>
 """nmap <silent> <Leader>sC :execute "ScreenShell java -cp \"" . classpath . "\" clojure.main" <cr>
+
+if has("statusline")
+    set statusline+=%{SyntasticStatuslineFlag()}
+endif
+set laststatus=2
