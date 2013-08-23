@@ -42,11 +42,6 @@ Hostname=129.199.81.135
 User=gsynnaeve
 IdentityFile=~/.ssh/ens_key
 
-Host=gitolite
-User=gitolite
-Hostname=129.199.81.135
-Identityfile=~/.ssh/gitolite_habilis
-
 Host=githabilis
 User=gitolite
 Hostname=129.199.81.135
