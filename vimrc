@@ -18,11 +18,16 @@ Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'ervandew/screen'
 " Bundle 'daveray/vimclojure-easy', {'rtp': 'bundle/vimclojure-2.3.1'}
-Bundle 'VimClojure'
+" Bundle 'VimClojure'
 Bundle 'snipMate'
 " Bundle 'altercation/vim-colors-solarized'
 Bundle 'pkamenarsky/atea.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
+Bundle 'guns/vim-clojure-static'
+Bundle 'rking/ag.vim'
+Bundle 'bling/vim-airline'
 
 
 filetype plugin on
@@ -135,27 +140,32 @@ augroup ml
 augroup END
 
 " Settings for VimClojure
-let vimclojure#HighlightBuiltins = 1 " Highlight Clojure's builtins
-let vimclojure#DynamicHighlighting = 1 " Highlight Clojure's builtins
-let vimclojure#NailgunServer = "127.0.0.1"
-let vimclojure#NailgunPort = "2113"
-
-"let vimclojure#WantNailgun = 1 " Nailgun server
+" let vimclojure#HighlightBuiltins = 1 " Highlight Clojure's builtins
+" let vimclojure#DynamicHighlighting = 1 " Highlight Clojure's builtins
+" let vimclojure#NailgunServer = "127.0.0.1"
+" let vimclojure#NailgunPort = "2113"
 "
-"let vimclojureRoot = "~/.vim/vimclojure-server-2.3.6.jar"
-"let classpath = join(
-"   \[".",
-"   \ "src", "src/main/clojure", "src/main/resources",
-"   \ "test", "src/test/clojure", "src/test/resources",
-"   \ "classes", "target/classes",
-"   \ "lib/*", "lib/dev/*",
-"   \ "bin",
-"   \],
-"   \ ":")
-"nmap <silent> <Leader>sc :execute "ScreenShell java -cp \"" . classpath . ":" . vimclojureRoot . "/lib/*" . "\" vimclojure.nailgun.NGServer 127.0.0.1" <cr>
-"" Start a generic Clojure repl (uses screen.vim)
-"nmap <silent> <Leader>sC :execute "ScreenShell java -cp \"" . classpath . "\" clojure.main" <cr>
+""let vimclojure#WantNailgun = 1 " Nailgun server
+""
+""let vimclojureRoot = "~/.vim/vimclojure-server-2.3.6.jar"
+""let classpath = join(
+""   \[".",
+""   \ "src", "src/main/clojure", "src/main/resources",
+""   \ "test", "src/test/clojure", "src/test/resources",
+""   \ "classes", "target/classes",
+""   \ "lib/*", "lib/dev/*",
+""   \ "bin",
+""   \],
+""   \ ":")
+""nmap <silent> <Leader>sc :execute "ScreenShell java -cp \"" . classpath . ":" . vimclojureRoot . "/lib/*" . "\" vimclojure.nailgun.NGServer 127.0.0.1" <cr>
+""" Start a generic Clojure repl (uses screen.vim)
+""nmap <silent> <Leader>sC :execute "ScreenShell java -cp \"" . classpath . "\" clojure.main" <cr>
+"
+""let classpath = system("lein classpath")
+""nmap <silent> <Leader>sc :execute "ScreenShell java -cp \"" . classpath . "\" vimclojure.nailgun.NGServer 127.0.0.1" <cr>
+"""nmap <silent> <Leader>sC :execute "ScreenShell java -cp \"" . classpath . "\" clojure.main" <cr>
 
-"let classpath = system("lein classpath")
-"nmap <silent> <Leader>sc :execute "ScreenShell java -cp \"" . classpath . "\" vimclojure.nailgun.NGServer 127.0.0.1" <cr>
-"nmap <silent> <Leader>sC :execute "ScreenShell java -cp \"" . classpath . "\" clojure.main" <cr>
+if has("statusline")
+    set statusline+=%{SyntasticStatuslineFlag()}
+endif
+set laststatus=2

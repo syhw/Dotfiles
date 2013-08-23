@@ -1,0 +1,2 @@
+bindkey -k F1 command
+term screen-256color
