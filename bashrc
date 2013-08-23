@@ -6,7 +6,8 @@ set bell-style none
 #defaults write -g com.apple.mouse.ignoreTrackpadIfMousePresent 0
 
 export JAVA_HOME=/Library/Java/Home
-export PATH=/usr/local/sbin:/usr/local/bin/:$PATH:/opt/local/bin:/opt/local/sbin:/Users/gabrielsynnaeve/.gem/ruby/1.8/bin:~/local/bin:~/Library/Haskell/bin:/usr/local/ada-4.3/bin:/usr/local/share/python:/usr/local/share/npm/bin/:/usr/sbin
+export RUBYPATH=/usr/local/Cellar/ruby/1.9.3-p374/bin
+export PATH=/usr/local/sbin:/usr/local/bin/:$PATH:/opt/local/bin:/opt/local/sbin:/Users/gabrielsynnaeve/.gem/ruby/1.8/bin:~/local/bin:~/Library/Haskell/bin:/usr/local/ada-4.3/bin:/usr/local/share/python:/usr/local/share/npm/bin/:/usr/sbin:$RUBYPATH
 export DISPLAY=:0.0
 export CLICOLOR=1
 export LSCOLORS="gxfxcxdxbxegedabagGxGx"
@@ -49,3 +50,5 @@ function range () {
 
 export PS1="\w \[\033[0;35m\]$\[\033[0m\] "
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
