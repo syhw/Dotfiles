@@ -61,3 +61,12 @@ Host=heroku.com
 User=git
 Hostname=heroku.com
 Identityfile=~/.ssh/github_rsa
+
+Host=titan
+User=gsynnaeve
+Hostname=129.199.81.32
+Identityfile=~/.ssh/ens_key
+
+Host=home
+User=syhw
+Hostname=93.31.174.125

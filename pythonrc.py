@@ -21,4 +21,6 @@ atexit.register(save_history)
 # anything not deleted (sys and os) will remain in the interpreter session
 del atexit, readline, rlcompleter, save_history, historyPath
 
+import numpy as np
+import pylab as pl
 
