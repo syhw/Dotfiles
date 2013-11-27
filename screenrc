@@ -1,2 +1,4 @@
 bindkey -k F1 command
 term screen-256color
+defscrollback 10000
+compacthist on

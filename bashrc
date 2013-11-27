@@ -57,10 +57,11 @@ export PS1="\w \[\033[0;35m\]$\[\033[0m\] "
 
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export CUDA_ROOT="/Developer/NVIDIA/CUDA-5.0/"
+export CUDA_ROOT="/Developer/NVIDIA/CUDA-5.5"
 export HTK_BIN="/Users/gabrielsynnaeve/postdoc/htk/HTKTools/"
-export PATH=$PATH:$HTK_BIN:$CUDA_ROOT/bin # HTK and CUDA
-#export DYLD_LIBRARY_PATH=$CUDA_ROOT/lib:$DYLD_LIBRARY_PATH
+export PATH=$CUDA_ROOT/bin:$PATH:$HTK_BIN # HTK and CUDA
+export DYLD_LIBRARY_PATH=$CUDA_ROOT/lib:$DYLD_LIBRARY_PATH
+export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH:"/Users/gabrielsynnaeve/anaconda/lib"
 
 # Pylearn 2
 export PYLEARN2_DATA_PATH=/Users/gabrielsynnaeve/Downloads/pylearn_data
