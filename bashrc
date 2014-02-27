@@ -7,8 +7,8 @@ set bell-style none
 
 export JAVA_HOME=/Library/Java/Home
 export RUBYPATH=/usr/local/Cellar/ruby/1.9.3-p374/bin
-export PATH=~/bin:/usr/local/sbin:/usr/local/bin/:$PATH:/Users/gabrielsynnaeve/.gem/ruby/1.8/bin:/usr/sbin:$RUBYPATH:~/bin:~/Library/Haskell/bin:/usr/local/share/python:/usr/local/share/npm/bin/
-export DISPLAY=:0.0
+export PATH=/Users/gabrielsynnaeve/local/bin:/bin:/usr/local/sbin:/usr/local/bin:$PATH:/Users/gabrielsynnaeve/.gem/ruby/1.8/bin:/usr/sbin:$RUBYPATH:~/bin:~/Library/Haskell/bin:/usr/local/share/npm/bin
+#export DISPLAY=:0.0
 export CLICOLOR=1
 export LSCOLORS="gxfxcxdxbxegedabagGxGx"
 export CPATH=/usr/X11R6/include
@@ -30,7 +30,7 @@ export TERM="xterm-256color"
 # shortcuts
 alias scpresume="rsync --partial --progress --rsh=ssh"
 alias cloj="rlwrap clj"
-alias ipy="/usr/local/share/python/ipython --pylab"
+alias ipy="ipython --pylab"
 alias git-serve='git daemon --reuseaddr --base-path=. --export-all'
 alias tunnel_wiki='ssh -f -L 8080:cogito.ens.fr:80 cogito -N'
 alias tunnel_irc='ssh -f -L 13337:irc.freenode.net:6667 cogito -N'
@@ -58,14 +58,15 @@ export PS1="\w \[\033[0;35m\]$\[\033[0m\] "
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export CUDA_ROOT="/Developer/NVIDIA/CUDA-5.5"
-export HTK_BIN="/Users/gabrielsynnaeve/postdoc/htk/HTKTools/"
+export HTK_BIN="/Users/gabrielsynnaeve/postdoc/htk/HTKTools"
 export PATH=$CUDA_ROOT/bin:$PATH:$HTK_BIN # HTK and CUDA
+#export DYLD_LIBRARY_PATH=/usr/local/lib:$DYLD_LIBRARY_PATH
 export DYLD_LIBRARY_PATH=$CUDA_ROOT/lib:$DYLD_LIBRARY_PATH
 export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH:"/Users/gabrielsynnaeve/anaconda/lib"
 
 # Pylearn 2
 export PYLEARN2_DATA_PATH=/Users/gabrielsynnaeve/Downloads/pylearn_data
-export PATH=$PATH:/Users/gabrielsynnaeve/labs/pylearn2/pylearn2/scripts/
+export PATH=$PATH:/Users/gabrielsynnaeve/labs/pylearn2/pylearn2/scripts
 
 # Go language
 export PATH="$PATH:$GOPATH/bin"
