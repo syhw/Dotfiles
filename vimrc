@@ -169,3 +169,8 @@ if has("statusline")
     set statusline+=%{SyntasticStatuslineFlag()}
 endif
 set laststatus=2
+
+set undofile
+set undodir=~/.vim/undo
+set undolevels=1000
+set undoreload=10000
