@@ -60,16 +60,22 @@ export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export CUDA_ROOT="/Developer/NVIDIA/CUDA-5.5"
 export HTK_BIN="/Users/gabrielsynnaeve/postdoc/htk/HTKTools"
 export PATH=$CUDA_ROOT/bin:$PATH:$HTK_BIN # HTK and CUDA
-#export DYLD_LIBRARY_PATH=/usr/local/lib:$DYLD_LIBRARY_PATH
-export DYLD_LIBRARY_PATH=$CUDA_ROOT/lib:$DYLD_LIBRARY_PATH
-export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH:"/Users/gabrielsynnaeve/anaconda/lib"
+#export DYLD_LIBRARY_PATH=$CUDA_ROOT/lib:$DYLD_LIBRARY_PATH
+#export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH:"/Users/gabrielsynnaeve/anaconda/lib"
 
 # Pylearn 2
-export PYLEARN2_DATA_PATH=/Users/gabrielsynnaeve/Downloads/pylearn_data
+export PYLEARN2_DATA_PATH=/Users/gabrielsynnaeve/postdoc/datasets
 export PATH=$PATH:/Users/gabrielsynnaeve/labs/pylearn2/pylearn2/scripts
 
 # Go language
 export PATH="$PATH:$GOPATH/bin"
 
+# Vamp/Vampy
+export VAMP_PATH=/Users/gabrielsynnaeve/Library/Audio/Plug-Ins/Vamp
+export VAMPY_PATH=$VAMP_PATH
+export PYTHONPATH=$PYTHONPATH:$VAMPY_PATH
+export PYLEARN2_VIEWER_COMMAND="open -W"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+

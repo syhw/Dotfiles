@@ -9,28 +9,27 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'ervandew/supertab'
-Bundle 'ervandew/screen'
-" Bundle 'daveray/vimclojure-easy', {'rtp': 'bundle/vimclojure-2.3.1'}
-" Bundle 'VimClojure'
-Bundle 'snipMate'
-" Bundle 'altercation/vim-colors-solarized'
-Bundle 'pkamenarsky/atea.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-classpath'
-Bundle 'guns/vim-clojure-static'
-Bundle 'rking/ag.vim'
-Bundle 'bling/vim-airline'
-
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'ervandew/supertab'
+Plugin 'ervandew/screen'
+Plugin 'snipMate'
+" Plugin 'altercation/vim-colors-solarized'
+Plugin 'pkamenarsky/atea.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-classpath'
+Plugin 'guns/vim-clojure-static'
+Plugin 'rking/ag.vim'
+Plugin 'bling/vim-airline'
+Plugin 'mbbill/undotree'
 
 filetype plugin on
+filetype plugin indent on
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
@@ -46,7 +45,7 @@ if has("vms")
 else
   set backup		" keep a backup file
 endif
-set history=50		" keep 50 lines of command line history
+set history=100		" keep 100 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
@@ -107,10 +106,6 @@ if v:version >= 703
     set colorcolumn=80 " set a colored delimiter at 80 char
 endif
 
-" To save with ctrl-s
-nmap <c-s> :w<CR>
-imap <c-s> <Esc>:w<CR>a
-
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
     for key in ['<Up>', '<Down>', '<Left>', '<Right>']
@@ -139,38 +134,15 @@ augroup ml
     au BufRead,BufNewFile *.ml set fileencoding=latin1
 augroup END
 
-" Settings for VimClojure
-" let vimclojure#HighlightBuiltins = 1 " Highlight Clojure's builtins
-" let vimclojure#DynamicHighlighting = 1 " Highlight Clojure's builtins
-" let vimclojure#NailgunServer = "127.0.0.1"
-" let vimclojure#NailgunPort = "2113"
-"
-""let vimclojure#WantNailgun = 1 " Nailgun server
-""
-""let vimclojureRoot = "~/.vim/vimclojure-server-2.3.6.jar"
-""let classpath = join(
-""   \[".",
-""   \ "src", "src/main/clojure", "src/main/resources",
-""   \ "test", "src/test/clojure", "src/test/resources",
-""   \ "classes", "target/classes",
-""   \ "lib/*", "lib/dev/*",
-""   \ "bin",
-""   \],
-""   \ ":")
-""nmap <silent> <Leader>sc :execute "ScreenShell java -cp \"" . classpath . ":" . vimclojureRoot . "/lib/*" . "\" vimclojure.nailgun.NGServer 127.0.0.1" <cr>
-""" Start a generic Clojure repl (uses screen.vim)
-""nmap <silent> <Leader>sC :execute "ScreenShell java -cp \"" . classpath . "\" clojure.main" <cr>
-"
-""let classpath = system("lein classpath")
-""nmap <silent> <Leader>sc :execute "ScreenShell java -cp \"" . classpath . "\" vimclojure.nailgun.NGServer 127.0.0.1" <cr>
-"""nmap <silent> <Leader>sC :execute "ScreenShell java -cp \"" . classpath . "\" clojure.main" <cr>
-
 if has("statusline")
     set statusline+=%{SyntasticStatuslineFlag()}
 endif
 set laststatus=2
 
-set undofile
-set undodir=~/.vim/undo
 set undolevels=1000
-set undoreload=10000
+if has("persistent_undo")
+    set undoreload=1000
+    set undodir=~/.vim/undo
+    set undofile
+endif
+
