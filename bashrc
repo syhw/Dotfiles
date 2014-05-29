@@ -36,6 +36,7 @@ alias tunnel_wiki='ssh -f -L 8080:cogito.ens.fr:80 cogito -N'
 alias tunnel_irc='ssh -f -L 13337:irc.freenode.net:6667 cogito -N'
 alias tunnel_cluster='ssh -f -L 3000:129.199.81.30:22 habilis -N && ssh -Y transtec@localhost -p 3000'
 alias ssh_cluster='ssh -Y -f -L 3000:129.199.81.30:22 habilis -N && ssh -Y gsynnaeve@localhost -p 3000'
+alias torchpkg='luarocks --server=https://raw.githubusercontent.com/torch/rocks/master'
 
 # typos
 alias amke='make'
