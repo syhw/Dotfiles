@@ -1,3 +1,8 @@
+#Host *
+#StrictHostKeyChecking no
+#ServerAliveInterval 300
+#ServerAliveCountMax 2
+
 Host=sonata
 Hostname=192.168.1.41
 User=syhw
@@ -73,3 +78,29 @@ Identityfile=~/.ssh/ens_key
 Host=home
 User=syhw
 Hostname=93.31.174.125
+
+Host=cortical
+User=gsynnaeve
+Hostname=129.199.81.145
+Identityfile=~/.ssh/ens_key
+
+Host=ec2_bootphon_front
+User=ubuntu
+Hostname=54.164.2.224
+IdentityFile=~/.ssh/ec2_bootphon.rsa
+
+Host=ec2_gpu1
+User=ubuntu
+Hostname=ec2-54-88-71-6.compute-1.amazonaws.com
+IdentityFile=~/.ssh/ec2_bootphon.rsa
+
+Host=ec2_gpu2
+User=ubuntu
+Hostname=ec2-54-175-218-161.compute-1.amazonaws.com
+IdentityFile=~/.ssh/ec2_bootphon.rsa
+
+Host=meetup
+User=ubuntu
+Hostname=ec2-52-1-126-231.compute-1.amazonaws.com
+IdentityFile=~/.ssh/dlmeetup.pem
+

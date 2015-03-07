@@ -22,5 +22,5 @@ atexit.register(save_history)
 del atexit, readline, rlcompleter, save_history, historyPath
 
 import numpy as np
-import pylab as pl
+#import pylab as pl
 

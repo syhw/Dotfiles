@@ -37,6 +37,7 @@ alias tunnel_irc='ssh -f -L 13337:irc.freenode.net:6667 cogito -N'
 alias tunnel_cluster='ssh -f -L 3000:129.199.81.30:22 habilis -N && ssh -Y transtec@localhost -p 3000'
 alias ssh_cluster='ssh -Y -f -L 3000:129.199.81.30:22 habilis -N && ssh -Y gsynnaeve@localhost -p 3000'
 alias torchpkg='luarocks --server=https://raw.githubusercontent.com/torch/rocks/master'
+alias py3=python3
 
 # typos
 alias amke='make'
@@ -58,7 +59,7 @@ export PS1="\w \[\033[0;35m\]$\[\033[0m\] "
 
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export CUDA_ROOT="/Developer/NVIDIA/CUDA-5.5"
+export CUDA_ROOT="/Developer/NVIDIA/CUDA-6.5"
 export HTK_BIN="/Users/gabrielsynnaeve/postdoc/htk/HTKTools"
 export PATH=$CUDA_ROOT/bin:$PATH:$HTK_BIN # HTK and CUDA
 #export DYLD_LIBRARY_PATH=$CUDA_ROOT/lib:$DYLD_LIBRARY_PATH
@@ -79,4 +80,3 @@ export PYLEARN2_VIEWER_COMMAND="open -W"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-

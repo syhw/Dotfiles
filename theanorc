@@ -1,5 +1,5 @@
 [global]
-device=gpu
+device=cpu
 floatX=float32
 allow_gc=False
 optimizer_including="local_ultra_fast_sigmoid"
