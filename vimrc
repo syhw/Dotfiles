@@ -6,10 +6,10 @@ endif
 set nocompatible " vIM
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
@@ -134,9 +134,6 @@ augroup ml
     au BufRead,BufNewFile *.ml set fileencoding=latin1
 augroup END
 
-if has("statusline")
-    set statusline+=%{SyntasticStatuslineFlag()}
-endif
 set laststatus=2
 
 set undolevels=1000
