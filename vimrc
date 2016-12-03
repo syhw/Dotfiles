@@ -27,6 +27,7 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
 Plugin 'mbbill/undotree'
+call vundle#end()
 
 filetype plugin on
 filetype plugin indent on
@@ -35,7 +36,7 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/swap
 
 " set the completion to a menu when there is more than 1 choice
-set completeopt=menu
+"set completeopt=menu
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -55,6 +56,7 @@ set incsearch		" do incremental searching
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
+  set t_Co=256
 endif
 
 " Only do this part when compiled with support for autocommands.

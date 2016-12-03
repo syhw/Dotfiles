@@ -13,19 +13,26 @@ export CLICOLOR=1
 export LSCOLORS="gxfxcxdxbxegedabagGxGx"
 export CPATH=/usr/X11R6/include
 export LIBRARY_PATH=/usr/X11R6/lib:/usr/lib
-export SVN_EDITOR=vim
-export GIT_EDITOR=vim
-export PYTHONSTARTUP="/Users/gabrielsynnaeve/.pythonrc.py"
+export EDITOR=vim
+export SVN_EDITOR=$EDITOR
+export GIT_EDITOR=$EDITOR
+export PYTHONSTARTUP="/Users/gab/.pythonrc.py"
 export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH:/Library/Python2.7/site-packages
 export VIRTUALENV_DISTRIBUTE=true
 export GOPATH=~/gocode
-export LC_CTYPE=fr_FR.UTF-8
-export LANG=fr_FR.UTF-8
-export LANGUAGE=fr_FR.UTF-8
-export LC_ALL=fr_FR.UTF-8
-export LC_MESSAGES=fr_FR.UTF-8
+#export LC_CTYPE=fr_FR.UTF-8
+#export LANG=fr_FR.UTF-8
+#export LANGUAGE=fr_FR.UTF-8
+#export LC_ALL=fr_FR.UTF-8
+#export LC_MESSAGES=fr_FR.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_MESSAGES=en_US.UTF-8
 export GNUTERM="x11"
 export TERM="xterm-256color"
+export HOMEBREW_GITHUB_API_TOKEN=f464d6cf00568f09cf0a9d488b3e194849b59e5f
 
 # shortcuts
 alias scpresume="rsync --partial --progress --rsh=ssh"
@@ -68,6 +75,7 @@ export PATH=$CUDA_ROOT/bin:$PATH:$HTK_BIN # HTK and CUDA
 # Pylearn 2
 export PYLEARN2_DATA_PATH=/Users/gabrielsynnaeve/postdoc/datasets
 export PATH=$PATH:/Users/gabrielsynnaeve/labs/pylearn2/pylearn2/scripts
+export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin
 
 # Go language
 export PATH="$PATH:$GOPATH/bin"
@@ -80,3 +88,7 @@ export PYLEARN2_VIEWER_COMMAND="open -W"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+. /Users/gab/torch/install/bin/torch-activate
+
+. /Users/gab/torch_mpi/env.sh
