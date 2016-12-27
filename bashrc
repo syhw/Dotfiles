@@ -92,3 +92,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 . /Users/gab/torch/install/bin/torch-activate
 
 . /Users/gab/torch_mpi/env.sh
+
+alias dckrun='docker run --user torchcraft --rm --privileged -it -p 5902:5900 7a85744faaa8 bash'
