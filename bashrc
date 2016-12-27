@@ -32,7 +32,7 @@ export LC_ALL=en_US.UTF-8
 export LC_MESSAGES=en_US.UTF-8
 export GNUTERM="x11"
 export TERM="xterm-256color"
-export HOMEBREW_GITHUB_API_TOKEN=f464d6cf00568f09cf0a9d488b3e194849b59e5f
+#export HOMEBREW_GITHUB_API_TOKEN=f464d6cf00568f09cf0a9d488b3e194849b59e5f
 
 # shortcuts
 alias scpresume="rsync --partial --progress --rsh=ssh"
