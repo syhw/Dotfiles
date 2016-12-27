@@ -3,18 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/gab/.oh-my-zsh
-export EDITOR='vim'
-export PATH=/Users/gabrielsynnaeve/local/bin:/bin:/usr/local/sbin:/usr/local/bin:$PATH:/usr/sbin
-#export LIBRARY_PATH=/usr/X11R6/lib:/usr/lib
-export SVN_EDITOR=$EDITOR
-export GIT_EDITOR=$EDITOR
-export LC_CTYPE=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LC_MESSAGES=en_US.UTF-8
-export TERM="xterm-256color"
-export DEFAULT_USER="gab"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -64,7 +52,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler osx docker brew web-search)
+plugins=(git bundler osx docker brew web-search vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,13 +85,57 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# good defaults gl
+export EDITOR='vim'
+export PATH=/Users/gab/local/bin:/bin:/usr/local/sbin:/usr/local/bin:$PATH:/usr/sbin
+#export LIBRARY_PATH=/usr/X11R6/lib:/usr/lib
+export SVN_EDITOR=$EDITOR
+export GIT_EDITOR=$EDITOR
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_MESSAGES=en_US.UTF-8
+export TERM="xterm-256color"
+export DEFAULT_USER="gab"
+export LSCOLORS="gxfxcxdxbxegedabagGxGx"
+export PYTHONSTARTUP="/Users/gab/.pythonrc.py"
+export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH:/Library/Python2.7/site-packages
+export VIRTUALENV_DISTRIBUTE=true
+
+# history things
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+#setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+#setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+#setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
+setopt HIST_BEEP                 # Beep when accessing nonexistent history.
+
+# typos aliases
 alias amke="make"
 alias fgfg="fg"
 
+# completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# torch things
 . /Users/gab/torch/install/bin/torch-activate
 . /Users/gab/torch_mpi/env.sh
 
+# docker things
 alias dckrun="docker run --user torchcraft --rm --privileged -it -p 5902:5900 7a85744faaa8 bash"
 
