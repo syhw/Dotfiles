@@ -52,7 +52,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler osx docker brew web-search vi-mode)
+plugins=(git bundler osx docker brew web-search vi-mode zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -138,4 +138,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # docker things
 alias dckrun="docker run --user torchcraft --rm --privileged -it -p 5902:5900 7a85744faaa8 bash"
+
+# K / kona
+alias kona='rlwrap /Users/gab/local/bin/k'
 

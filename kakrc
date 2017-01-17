@@ -83,4 +83,4 @@ hook global InsertCompletionHide .* %{ unmap window insert <tab> <c-n>; unmap wi
 
 def find -params 1 -shell-candidates %{ find . -type f } %{ edit %arg{1} }
 
-colorscheme base16
+colorscheme solarized

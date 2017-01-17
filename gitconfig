@@ -9,6 +9,7 @@
     ci = commit
     co = checkout
     w = whatchanged
+    pull = pull --ff-only
 
 [diff]  
     renamelimit = 0
@@ -22,3 +23,5 @@
     pager = true # these ones
 [push]
 	default = matching
+
+
