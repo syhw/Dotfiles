@@ -57,3 +57,6 @@ source ~/.bashrc
 
 
 . /Users/gab/torch_mpi/env.sh
+
+
+. /Users/gab/torch/install/bin/torch-activate

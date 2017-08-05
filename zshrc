@@ -52,7 +52,9 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler osx docker brew web-search vi-mode zsh-completions)
+plugins=(gitfast bundler osx docker brew web-search vi-mode zsh-completions catimg common-aliasest)
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,13 +134,22 @@ alias fgfg="fg"
 # completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# torch things
-. /Users/gab/torch/install/bin/torch-activate
-. /Users/gab/torch_mpi/env.sh
-
 # docker things
 alias dckrun="docker run --user torchcraft --rm --privileged -it -p 5902:5900 7a85744faaa8 bash"
 
 # K / kona
 alias kona='rlwrap /Users/gab/local/bin/k'
 
+# added by Anaconda3 4.2.0 installer
+export PATH="/Users/gab/anaconda3/bin:$PATH"
+
+# my include and bin
+export PATH="$PATH:/Users/gab/local/bin"
+export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/Users/gab/local/include"
+export C_INCLUDE_PATH="$C_INCLUDE_PATH:/Users/gab/local/include"
+export LIBRARY_PATH="$LIBRARY_PATH:/Users/gab/local/lib"
+export RPATH="$RPATH:/Users/gab/local/lib"
+export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/Users/gab/local/lib"
+alias bwenv_openbw="BWAPI_CONFIG_AI__AI=/Users/gab/torchcraft/BWEnv/build/BWEnv.dylib BWAPILauncher"
+
+. /Users/gab/torch/install/bin/torch-activate

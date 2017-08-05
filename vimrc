@@ -9,24 +9,30 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'ervandew/supertab'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdcommenter'
+" Plugin 'scrooloose/syntastic'
+Plugin 'maralla/validator.vim'
+" Plugin 'ervandew/supertab'
 Plugin 'ervandew/screen'
 Plugin 'snipMate'
 " Plugin 'altercation/vim-colors-solarized'
 Plugin 'pkamenarsky/atea.vim'
-Plugin 'kien/ctrlp.vim'
+"Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-classpath'
 Plugin 'guns/vim-clojure-static'
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
 Plugin 'mbbill/undotree'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'valloric/youcompleteme'
+Plugin 'rdnetto/YCM-Generator'
+Plugin 'mindriot101/vim-yapf'
+Plugin 'rhysd/vim-clang-format'
 call vundle#end()
 
 filetype plugin on
@@ -144,4 +150,23 @@ if has("persistent_undo")
     set undodir=~/.vim/undo
     set undofile
 endif
+
+" YCM options:
+"let g:ycm_register_as_syntastic_checker = 1 "default 1
+"let g:Show_diagnostics_ui = 1 "default 1
+"let g:ycm_enable_diagnostic_signs = 1
+"let g:ycm_enable_diagnostic_highlighting = 0
+"let g:ycm_always_populate_location_list = 1 "default 0
+"let g:ycm_open_loclist_on_ycm_diags = 1 "default 1
+"let g:ycm_python_binary_path = 'python'
+
+" syntastic options
+"let g:syntastic_python_checkers = ['flake8']
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 

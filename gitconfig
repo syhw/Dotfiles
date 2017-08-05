@@ -2,14 +2,13 @@
 	name = syhw
 	email = gabriel.synnaeve@gmail.com
 [alias]
-	lol = log --pretty=oneline --abbrev-commit --graph --decorate
-    logl = log --pretty=oneline --abbrev-commit
+    lol = log --first-parent --graph --oneline --all --abbrev-commit --decorate
     gl = log --graph --pretty=oneline --abbrev-commit -25
     st = status -sb
     ci = commit
     co = checkout
     w = whatchanged
-    pull = pull --ff-only
+    pull = pull --ff-only --rebase
 
 [diff]  
     renamelimit = 0
@@ -25,3 +24,5 @@
 	default = matching
 
 
+[core]
+	excludesfile = /Users/gab/.gitignore_global
