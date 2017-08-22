@@ -52,7 +52,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast bundler osx docker brew web-search vi-mode zsh-completions catimg common-aliasest)
+plugins=(gitfast bundler osx docker brew web-search vi-mode zsh-completions catimg common-aliasest per-directory-history)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
@@ -151,5 +151,8 @@ export LIBRARY_PATH="$LIBRARY_PATH:/Users/gab/local/lib"
 export RPATH="$RPATH:/Users/gab/local/lib"
 export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/Users/gab/local/lib"
 alias bwenv_openbw="BWAPI_CONFIG_AI__AI=/Users/gab/torchcraft/BWEnv/build/BWEnv.dylib BWAPILauncher"
+
+#export CC=/usr/local/opt/llvm/bin/clang
+#export CXX=/usr/local/opt/llvm/bin/clang++
 
 . /Users/gab/torch/install/bin/torch-activate

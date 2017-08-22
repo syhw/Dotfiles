@@ -9,6 +9,7 @@
     co = checkout
     w = whatchanged
     pull = pull --ff-only --rebase
+    smu = submodule update
 
 [diff]  
     renamelimit = 0

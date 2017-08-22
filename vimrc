@@ -33,6 +33,7 @@ Plugin 'valloric/youcompleteme'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'mindriot101/vim-yapf'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'Yggdroot/indentLine'
 call vundle#end()
 
 filetype plugin on
