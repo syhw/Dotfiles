@@ -52,7 +52,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast bundler osx docker brew web-search vi-mode zsh-completions catimg common-aliasest per-directory-history)
+plugins=(gitfast bundler osx docker brew web-search zsh-completions catimg common-aliasest per-directory-history fzf-zsh)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
@@ -140,19 +140,26 @@ alias dckrun="docker run --user torchcraft --rm --privileged -it -p 5902:5900 7a
 # K / kona
 alias kona='rlwrap /Users/gab/local/bin/k'
 
-# added by Anaconda3 4.2.0 installer
-export PATH="/Users/gab/anaconda3/bin:$PATH"
-
 # my include and bin
-export PATH="$PATH:/Users/gab/local/bin"
-export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/Users/gab/local/include"
-export C_INCLUDE_PATH="$C_INCLUDE_PATH:/Users/gab/local/include"
-export LIBRARY_PATH="$LIBRARY_PATH:/Users/gab/local/lib"
-export RPATH="$RPATH:/Users/gab/local/lib"
-export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/Users/gab/local/lib"
+#export PATH="$PATH:/Users/gab/local/bin"
+#export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/Users/gab/local/include"
+#export C_INCLUDE_PATH="$C_INCLUDE_PATH:/Users/gab/local/include"
+#export LIBRARY_PATH="$LIBRARY_PATH:/Users/gab/local/lib"
+#export RPATH="$RPATH:/Users/gab/local/lib"
+#export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/Users/gab/local/lib"
 alias bwenv_openbw="BWAPI_CONFIG_AI__AI=/Users/gab/torchcraft/BWEnv/build/BWEnv.dylib BWAPILauncher"
+alias wat='python -m pdb -c continue'
+alias color='echo -ne "\033[0m"'
 
 #export CC=/usr/local/opt/llvm/bin/clang
 #export CXX=/usr/local/opt/llvm/bin/clang++
 
 . /Users/gab/torch/install/bin/torch-activate
+bindkey "^R" history-incremental-pattern-search-backward
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+
+export PATH="/Users/gab/anaconda3/bin:$PATH"

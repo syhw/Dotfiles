@@ -8,11 +8,13 @@
     ci = commit
     co = checkout
     w = whatchanged
-    pull = pull --ff-only --rebase
+    pull = pull --rebase
     smu = submodule update
+	d = difftool
 
 [diff]  
     renamelimit = 0
+	tool = vimdiff
 
 [color] 
     diff = auto
@@ -27,3 +29,5 @@
 
 [core]
 	excludesfile = /Users/gab/.gitignore_global
+[difftool]
+	prompt = false
