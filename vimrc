@@ -14,21 +14,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugin 'scrooloose/nerdtree'
 " Plugin 'scrooloose/nerdcommenter'
-" Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-fugitive'
-" Plugin 'scrooloose/syntastic' deprecated by below
-" Plugin 'maralla/validator.vim' deprecated by below
 Plugin 'w0rp/ale'
 Plugin 'ervandew/screen'
 Plugin 'snipMate'
-" Plugin 'altercation/vim-colors-solarized'
 " Plugin 'SirVer/ultisnips' TODO use
 Plugin 'pkamenarsky/atea.vim'
-" Plugin 'ctrlpvim/ctrlp.vim' deprecated by fzf
 Plugin 'rking/ag.vim'
-" Plugin 'tpope/vim-fireplace' I don't do Clojure anymore
-" Plugin 'tpope/vim-classpath' I don't do Clojure anymore
-" Plugin 'guns/vim-clojure-static' I don't do Clojure anymore
 Plugin 'bling/vim-airline'
 Plugin 'mbbill/undotree'
 Plugin 'junegunn/vim-easy-align'
@@ -36,7 +28,6 @@ Plugin 'valloric/youcompleteme'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'mindriot101/vim-yapf'
 Plugin 'rhysd/vim-clang-format'
-"Plugin 'Yggdroot/indentLine'
 Plugin 'lervag/vimtex'
 
 call vundle#end()

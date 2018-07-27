@@ -7,20 +7,42 @@
     mkdir ~/.vim/swap
     dotfiles -s -C Dotfiles/dotfilesrc
 
-# Optional
+# Vundle
 
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 followed by running vim and:
-    
+
     :BundleInstall
 
-Also, for Clojure:
-    
-    cp ~/Dotfiles/vim-cloj.sh /usr/local/bin/
-    chmod u+x /usr/local/bin/vim-cloj.sh
+# Mac OS X
 
-and the vimclojure/server dependency for leiningen project.clj:
-
-    :dev-dependencies [[vimclojure/server "2.3.6"]]
-
+ - System Preferences -> Accessibility -> Reduce motion
+ - Iterm2 -> Preferences -> untick Native Full Screen
+ - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
+ - [MacVim](http://macvim-dev.github.io/macvim/) + `ln -s /Applications/MacVim.app/Contents/bin/vim /usr/local/bin/vim`
+ - [FUSE](https://osxfuse.github.io/)
+ - (optional) [Anaconda](https://www.anaconda.com/download/#macos)
+ - Homebrew:
+   - `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+   - minimal Casks:
+```
+cmake
+et
+ffmpeg
+freetype
+fzf
+gflags
+htop
+imagemagick
+pv
+ripgrep
+rlwrap
+sloccount
+sshfs
+vim
+wget
+zsh-completions
+zsh-history-substring-search
+zsh-syntax-highlighting
+```

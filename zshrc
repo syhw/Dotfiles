@@ -52,46 +52,16 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast bundler osx docker brew web-search zsh-completions catimg common-aliasest per-directory-history fzf-zsh)
+plugins=(gitfast bundler osx brew zsh-completions catimg common-aliasest fzf-zsh)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
 
-# good defaults gl
 export EDITOR='vim'
 export PATH=/Users/gab/local/bin:/bin:/usr/local/sbin:/usr/local/bin:$PATH:/usr/sbin
 #export LIBRARY_PATH=/usr/X11R6/lib:/usr/lib
@@ -138,23 +108,12 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 alias dckrun="docker run --user torchcraft --rm --privileged -it -p 5902:5900 7a85744faaa8 bash"
 
 # K / kona
-alias kona='rlwrap /Users/gab/local/bin/k'
+alias kona='rlwrap /Users/gab/kona/k'
 
-# my include and bin
-#export PATH="$PATH:/Users/gab/local/bin"
-#export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/Users/gab/local/include"
-#export C_INCLUDE_PATH="$C_INCLUDE_PATH:/Users/gab/local/include"
-#export LIBRARY_PATH="$LIBRARY_PATH:/Users/gab/local/lib"
-#export RPATH="$RPATH:/Users/gab/local/lib"
-#export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/Users/gab/local/lib"
 alias bwenv_openbw="BWAPI_CONFIG_AI__AI=/Users/gab/torchcraft/BWEnv/build/BWEnv.dylib BWAPILauncher"
 alias wat='python -m pdb -c continue'
 alias color='echo -ne "\033[0m"'
 
-#export CC=/usr/local/opt/llvm/bin/clang
-#export CXX=/usr/local/opt/llvm/bin/clang++
-
-. /Users/gab/torch/install/bin/torch-activate
 bindkey "^R" history-incremental-pattern-search-backward
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -163,3 +122,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 
 export PATH="/Users/gab/anaconda3/bin:$PATH"
+
+cpfromdevfair() {
+    rsync -r --progress --rsh "ssh frc-fairjmp02 ssh" "devfair:$1" $2
+}
+alias mntdevfair="sshfs devfair:. devfair_home -o ssh_command='ssh -t frc-fairjmp02 ssh'"
+

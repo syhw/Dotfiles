@@ -1,33 +1,41 @@
+# This is Git's per-user configuration file.
+
 [user]
-	name = syhw
-	email = gabriel.synnaeve@gmail.com
+    name = syhw
+    email = gabriel.synnaeve@gmail.com
+
 [alias]
     lol = log --first-parent --graph --oneline --all --abbrev-commit --decorate
     gl = log --graph --pretty=oneline --abbrev-commit -25
-    st = status -sb
+    st = status -sb -uno --ignore-submodules=dirty
     ci = commit
     co = checkout
     w = whatchanged
-    pull = pull --rebase
-    smu = submodule update
-	d = difftool
+    pu = pull --rebase
+    sms = submodule sync --recursive
+    smu = submodule update --init --recursive
+    d = difftool
 
-[diff]  
+[diff]
     renamelimit = 0
-	tool = vimdiff
+    tool = vimdiff
 
-[color] 
+[color]
     diff = auto
     interactive = auto
     status = auto
     branch = auto
     ui = true    # not sure about
     pager = true # these ones
-[push]
-	default = matching
 
+[push]
+    default = matching
 
 [core]
-	excludesfile = /Users/gab/.gitignore_global
+    excludesfile = /Users/gab/.gitignore_global
+    autocrlf = false
+    preloadindex = true
 [difftool]
-	prompt = false
+    prompt = false
+[rerere]
+    enabled = 1
