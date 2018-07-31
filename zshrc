@@ -81,8 +81,8 @@ export VIRTUALENV_DISTRIBUTE=true
 
 # history things
 HISTFILE="$HOME/.zsh_history"
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
@@ -110,7 +110,6 @@ alias dckrun="docker run --user torchcraft --rm --privileged -it -p 5902:5900 7a
 # K / kona
 alias kona='rlwrap /Users/gab/kona/k'
 
-alias bwenv_openbw="BWAPI_CONFIG_AI__AI=/Users/gab/torchcraft/BWEnv/build/BWEnv.dylib BWAPILauncher"
 alias wat='python -m pdb -c continue'
 alias color='echo -ne "\033[0m"'
 

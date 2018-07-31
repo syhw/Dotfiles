@@ -141,9 +141,9 @@ augroup END
 
 set laststatus=2
 
-set undolevels=1000
+set undolevels=10000
 if has("persistent_undo")
-    set undoreload=1000
+    set undoreload=10000
     set undodir=~/.vim/undo
     set undofile
 endif
@@ -165,5 +165,4 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
 
