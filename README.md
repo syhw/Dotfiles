@@ -9,11 +9,8 @@
 
 # Vundle
 
-    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
-followed by running vim and:
-
-    :BundleInstall
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    vim +PluginInstall +qall
 
 # Mac OS X
 
