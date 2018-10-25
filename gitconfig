@@ -6,6 +6,7 @@
 
 [alias]
     lol = log --first-parent --graph --oneline --all --abbrev-commit --decorate
+    lb = log --all --graph --decorate --oneline --simplify-by-decoration
     gl = log --graph --pretty=oneline --abbrev-commit -25
     st = status -sb -uno --ignore-submodules=dirty
     ci = commit
@@ -39,3 +40,8 @@
     prompt = false
 [rerere]
     enabled = 1
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

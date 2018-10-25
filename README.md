@@ -27,7 +27,11 @@ followed by running vim and:
    - `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
    - minimal Casks:
 ```
+ccache
+clang-format
 cmake
+coreutils
+doxygen
 et
 ffmpeg
 freetype
@@ -35,14 +39,23 @@ fzf
 gflags
 htop
 imagemagick
+ninja
+node
+openssl
+optipng
 pv
 ripgrep
 rlwrap
 sloccount
 sshfs
+tldr
 vim
 wget
+x264
+x265
+xsv
 zsh-completions
 zsh-history-substring-search
 zsh-syntax-highlighting
+zstd
 ```
