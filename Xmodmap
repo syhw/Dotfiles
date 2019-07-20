@@ -1,8 +1,0 @@
-remove Lock = Caps_Lock
-keysym Caps_Lock = Escape
-
-clear Mod1
-clear Mod4
-keycode 66 = Alt_L
-add Mod4 = Alt_L
-
