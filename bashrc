@@ -43,7 +43,6 @@ alias tunnel_wiki='ssh -f -L 8080:cogito.ens.fr:80 cogito -N'
 alias tunnel_irc='ssh -f -L 13337:irc.freenode.net:6667 cogito -N'
 alias tunnel_cluster='ssh -f -L 3000:129.199.81.30:22 habilis -N && ssh -Y transtec@localhost -p 3000'
 alias ssh_cluster='ssh -Y -f -L 3000:129.199.81.30:22 habilis -N && ssh -Y gsynnaeve@localhost -p 3000'
-alias torchpkg='luarocks --server=https://raw.githubusercontent.com/torch/rocks/master'
 alias py3=python3
 
 # typos
@@ -88,11 +87,5 @@ export PYLEARN2_VIEWER_COMMAND="open -W"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-. /Users/gab/torch/install/bin/torch-activate
-
-. /Users/gab/torch_mpi/env.sh
-
-alias dckrun='docker run --user torchcraft --rm --privileged -it -p 5902:5900 7a85744faaa8 bash'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
