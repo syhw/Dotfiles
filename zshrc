@@ -81,8 +81,8 @@ export VIRTUALENV_DISTRIBUTE=true
 
 # history things
 HISTFILE="$HOME/.zsh_history"
-HISTSIZE=100000
-SAVEHIST=100000
+HISTSIZE=1000000
+SAVEHIST=1000000
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
@@ -104,9 +104,6 @@ alias fgfg="fg"
 # completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# docker things
-alias dckrun="docker run --user torchcraft --rm --privileged -it -p 5902:5900 7a85744faaa8 bash"
-
 # K / kona
 alias kona='rlwrap /Users/gab/kona/k'
 
@@ -126,4 +123,6 @@ cpfromdevfair() {
     rsync -r --progress --rsh "ssh frc-fairjmp02 ssh" "devfair:$1" $2
 }
 alias mntdevfair="sshfs devfair:. devfair_home -o ssh_command='ssh -t frc-fairjmp02 ssh'"
+alias cdp="cd -P"
+alias gitup="git pull --rebase && git submodule sync --recursive && git submodule update --init --recursive"
 
