@@ -14,12 +14,14 @@
 
 # Mac OS X
 
- - System Preferences -> Accessibility -> Reduce motion
+ - System Preferences -> {Accessibility -> Zoom} and {Trackpad -> Scoll & Zoom}
  - Iterm2 -> Preferences -> untick Native Full Screen
  - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
  - [MacVim](http://macvim-dev.github.io/macvim/) + `ln -s /Applications/MacVim.app/Contents/bin/vim /usr/local/bin/vim`
  - [FUSE](https://osxfuse.github.io/)
  - (optional) [Anaconda](https://www.anaconda.com/download/#macos)
+ - [Karabiner-Elements](https://karabiner-elements.pqrs.org/) with "For all devices" caps_lock -> escape, and "Apple Internal Keyboard / ..." fn -> left_control and left_control -> fn
+ - (optional) [Rectangle](https://rectangleapp.com/)
  - Homebrew:
    - `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
    - minimal Casks:
