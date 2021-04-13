@@ -22,6 +22,7 @@
  - (optional) [Anaconda](https://www.anaconda.com/download/#macos)
  - [Karabiner-Elements](https://karabiner-elements.pqrs.org/) with "For all devices" caps_lock -> escape, and "Apple Internal Keyboard / ..." fn -> left_control and left_control -> fn
  - (optional) [Rectangle](https://rectangleapp.com/)
+ - (optional) `git clone git@github.com:skywind3000/z.lua.git`
  - Homebrew:
    - `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
    - minimal Casks:
