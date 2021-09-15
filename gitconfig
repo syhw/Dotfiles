@@ -26,8 +26,8 @@
     interactive = auto
     status = auto
     branch = auto
-    ui = true    # not sure about
-    pager = true # these ones
+    ui = true
+    pager = true
 
 [push]
     default = matching
