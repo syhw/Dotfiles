@@ -52,7 +52,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast bundler osx brew catimg common-aliases fzf z)
+plugins=(gitfast bundler macos brew catimg common-aliases fzf z)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
@@ -157,3 +157,4 @@ unset __conda_setup
 eval "$(mcfly init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 
+export PATH=/Users/gab/.cargo/bin:$PATH
