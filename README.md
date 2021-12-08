@@ -34,4 +34,4 @@ brew install ccache clang-format cmake coreutils doxygen ffmpeg freetype fzf gfl
 brew tap cantino/mcfly && brew install zoxide mcfly && brew install MisterTea/et/et
 ```
  - fd and ripgrep: `cargo install fd-find ripgrep`
- - config term: solarized dark + darker background + `git clone https://github.com/powerline/fonts` + copy Meslo Dotted in font book + replace font in profile/text for Meslo LG S, font size 15 + in profile/terminal silence bell
+ - config term: solarized dark + darker background + `git clone https://github.com/powerline/fonts` + copy Meslo Dotted in font book + replace font in profile/text for Meslo LG S, font size 16 + in profile/terminal silence bell
