@@ -29,9 +29,9 @@
 ```
 brew install ccache clang-format cmake coreutils doxygen ffmpeg freetype fzf gflags htop imagemagick ninja node openssl optipng pv ripgrep rlwrap sloccount sshfs tldr vim wget x264 x265 xsv zsh-completions zsh-history-substring-search zsh-syntax-highlighting zstd cargo
 ```
-   - optional:
+   - further brew installs:
 ```
-brew tap cantino/mcfly && brew install zoxide mcfly
+brew tap cantino/mcfly && brew install zoxide mcfly && brew install MisterTea/et/et
 ```
  - fd and ripgrep: `cargo install fd-find ripgrep`
  - config term: solarized dark + darker background + `git clone https://github.com/powerline/fonts` + copy Meslo Dotted in font book + replace font in profile/text for Meslo LG S, font size 15 + in profile/terminal silence bell
