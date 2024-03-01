@@ -117,7 +117,7 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 
-export PATH="/Users/gab/anaconda3/bin:$PATH:/Applications/Julia-1.1.app/Contents/Resources/julia/bin"
+export PATH="$PATH:/Applications/Julia-1.1.app/Contents/Resources/julia/bin"
 
 cpfromdevfair() {
     rsync -r --progress --rsh "ssh frc-fairjmp02 ssh" "devfair:$1" $2
@@ -128,33 +128,34 @@ alias gitup="git pull --rebase && git submodule sync --recursive && git submodul
 
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/gab/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gab/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/gab/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gab/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 alias gcpssh='gcloud compute --project "amiable-bonus-235803" ssh --zone "us-east1-b" "instance-1"'
 
 eval "$(lua /Users/gab/z.lua/z.lua --init zsh enhanced once fzf)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/gab/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/gab/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/gab/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/gab/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/gab/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/gab/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/gab/anaconda3/bin:$PATH"
+        export PATH="/Users/gab/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 #
 
-eval "$(mcfly init zsh)"
+#eval "$(mcfly init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 
-export PATH=/Users/gab/.cargo/bin:$PATH
+export PATH=/usr/local/bin:/Users/gab/.cargo/bin:$PATH
+unalias fd
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/gab/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gab/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/gab/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gab/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
