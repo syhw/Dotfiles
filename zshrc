@@ -53,8 +53,6 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(gitfast bundler macos brew catimg common-aliases fzf z)
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,22 +130,6 @@ alias gcpssh='gcloud compute --project "amiable-bonus-235803" ssh --zone "us-eas
 
 eval "$(lua /Users/gab/z.lua/z.lua --init zsh enhanced once fzf)"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/gab/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/gab/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/gab/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/gab/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-#
-
 #eval "$(mcfly init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 
@@ -159,3 +141,21 @@ if [ -f '/Users/gab/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/g
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/gab/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gab/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/gab/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/gab/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/gab/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/gab/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
