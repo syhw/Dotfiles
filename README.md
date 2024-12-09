@@ -19,7 +19,13 @@
  - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
  - [MacVim](http://macvim-dev.github.io/macvim/) + `ln -s /Applications/MacVim.app/Contents/bin/vim /usr/local/bin/vim`
  - [FUSE](https://osxfuse.github.io/)
- - (optional) [Anaconda](https://www.anaconda.com/download/#macos)
+ - Anaconda: 
+```
+mkdir -p ~/miniconda3
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm ~/miniconda3/miniconda.sh
+```
  - [Karabiner-Elements](https://karabiner-elements.pqrs.org/) with "For all devices" caps_lock -> escape, and "Apple Internal Keyboard / ..." fn -> left_control and left_control -> fn
  - (optional) [Rectangle](https://rectangleapp.com/)
  - (optional) `git clone git@github.com:skywind3000/z.lua.git`
