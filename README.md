@@ -20,7 +20,6 @@
  - [Karabiner-Elements](https://karabiner-elements.pqrs.org/) with "For all devices" caps_lock -> escape, and "Apple Internal Keyboard / ..." fn -> left_control and left_control -> fn
  - (optional) [Rectangle](https://rectangleapp.com/)
  - (optional) [FUSE](https://osxfuse.github.io/)
- - (optional) `git clone git@github.com:skywind3000/z.lua.git`
  - Homebrew:
    - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
    - minimal Casks:
@@ -32,4 +31,5 @@ brew install ccache clang-format cmake coreutils doxygen ffmpeg freetype fzf gfl
 brew install MisterTea/et/et
 ```
  - fd and ripgrep: `cargo install fd-find ripgrep`
+ - mcfly-fzf `cargo install --git https://github.com/bnprks/mcfly-fzf`
  - config term: solarized dark + darker background + `git clone https://github.com/powerline/fonts` + copy Meslo Dotted in font book + replace font in profile/text for Meslo LG S, font size 16 + in profile/terminal silence bell
