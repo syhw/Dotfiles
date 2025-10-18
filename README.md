@@ -17,23 +17,15 @@
  - System Preferences -> {Accessibility -> Zoom} and {Trackpad -> Scoll & Zoom}
  - Iterm2 -> Preferences -> untick Native Full Screen
  - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
- - [MacVim](http://macvim-dev.github.io/macvim/) + `ln -s /Applications/MacVim.app/Contents/bin/vim /usr/local/bin/vim`
- - [FUSE](https://osxfuse.github.io/)
- - Anaconda: 
-```
-mkdir -p ~/miniconda3
-curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm ~/miniconda3/miniconda.sh
-```
  - [Karabiner-Elements](https://karabiner-elements.pqrs.org/) with "For all devices" caps_lock -> escape, and "Apple Internal Keyboard / ..." fn -> left_control and left_control -> fn
  - (optional) [Rectangle](https://rectangleapp.com/)
+ - (optional) [FUSE](https://osxfuse.github.io/)
  - (optional) `git clone git@github.com:skywind3000/z.lua.git`
  - Homebrew:
    - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
    - minimal Casks:
 ```
-brew install ccache clang-format cmake coreutils doxygen ffmpeg freetype fzf gflags htop imagemagick ninja node openssl optipng pv ripgrep rlwrap sloccount sshfs tldr vim wget x264 x265 xsv zsh-completions zsh-history-substring-search zsh-syntax-highlighting zstd rust zoxide mcfly
+brew install ccache clang-format cmake coreutils doxygen ffmpeg freetype fzf gflags htop imagemagick ninja node openssl optipng pv ripgrep rlwrap sloccount sshfs tldr vim wget x264 x265 xsv zsh-completions zsh-history-substring-search zsh-syntax-highlighting zstd rust zoxide mcfly micromamba neovim
 ```
    - Eternal Terminal
 ```
